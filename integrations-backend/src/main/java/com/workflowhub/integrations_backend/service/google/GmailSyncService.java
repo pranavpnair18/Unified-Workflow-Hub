@@ -33,6 +33,7 @@ public class GmailSyncService {
                 oauthCredentialRepository
                         .findByIntegrationId(integration.getId())
                         .orElseThrow();
+                System.out.println("cred: " + cred);
 
         String accessToken =
         gmailTokenService.getValidAccessToken(integration.getId());
